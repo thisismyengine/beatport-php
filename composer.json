@@ -5,6 +5,6 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
-		"psr-0": { "Beatport\\": "src/Beatport" }
-	}
+	"psr-0": { "Beatport\\": "src" }
+    }
 }
