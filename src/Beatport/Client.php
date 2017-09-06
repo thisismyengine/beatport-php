@@ -19,7 +19,7 @@ class Client
     public function __construct($params)
     {
         // assign beatport credentials
-        $consumer_key = $params['consumer'];
+        $consumer_key = $params['key'];
         $consumer_secret = $params['secret'];
         
         $username = $params['username'];
