@@ -125,18 +125,14 @@ class Client
     /**
      * Process API request.
      *
-     * @param array $parameters API filters
+     * @param array $parameters API filters (facets, sortBy, perPage, id, url, etc)
      *
      * @return string Response
      */
-    public function get($parameters)
+    public function get($endpoint, $parameters)
     {
-        // parameters array with facets, sortBy, perPage, id, url, etc
-        $method = $parameters['method']; // this is the API method, e.g. tracks, releases etc
-        unset($parameters['method']); // unset it as it's not a query param
-
         // make the api call
-        $response = $this->client->get('catalog/3/'.$method, [
+        $response = $this->client->get('catalog/3/'.$endpoint, [
             'query' => $parameters
         ]);
 
